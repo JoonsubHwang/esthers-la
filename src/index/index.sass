@@ -2,13 +2,17 @@
 
 // font
 $font-family: 'Inter', sans-serif
+$small-font-size:  13px
+$medium-font-size: 16px
+$large-font-size:  20px
+$xlarge-font-size: 26px
 
 // colors
-$primary-color:     rgb(205, 0, 85)
-$bg-color:          rgb(10, 10, 10)
-$bg-light-color:    rgb(30, 30, 30)
-$fg-color:          rgb(255, 255, 255)
-$fg-dark-color:     rgb(130, 130, 130)
+$primary-color:    rgb(205, 0, 85)
+$bg-color:         rgb(10, 10, 10)
+$bg-light-color:   rgb(30, 30, 30)
+$fg-color:         rgb(255, 255, 255)
+$fg-dark-color:    rgb(130, 130, 130)
 
 // screen size breakpoints
 $mobile-max-width: 500px
@@ -17,10 +21,7 @@ $tablet-max-width: 900px
 
 :root 
     font-family: $font-family
+    font-size: $medium-font-size
     background-color: $bg-color
     color: $fg-color
 
-    @media (max-width: $mobile-max-width)
-        font-size: 12px
-    @media (min-width: $mobile-max-width)
-        font-size: 14px
