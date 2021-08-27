@@ -2,7 +2,10 @@
 
 [Esthers.LA](https://Esthers.LA/) is a website where users can search their character or find info and tools for a videogame called [LostArk](https://playlostark.com/).
 
-Kayden Joonsub Hwang
+<br/>
+
+**Author** <br/>
+Kayden Joonsub Hwang <br/>
 [LinkedIn](https://www.linkedin.com/in/kayden-hwang-43639419b/)
 
 <br/><br/>
