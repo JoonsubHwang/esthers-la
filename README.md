@@ -30,8 +30,8 @@ Kayden Joonsub Hwang
 
 <details open>
 <summary>
-## Features
-*Empty boxes are features not implemented yet.*
+    <h2>Features</h2>
+    <em>Empty boxes are features not implemented yet.</em>
 </summary>
 
 - [ ] 0. App
