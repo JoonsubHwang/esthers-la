@@ -1,0 +1,27 @@
+{
+  "name": "esthers-la",
+  "version": "1.0.0",
+  "description": "Esthers.la: LostArk character search & info",
+  "main": "/server/index.js",
+  "scripts": {
+    "test": "react-scripts test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoonsubHwang/esthers-la.git"
+  },
+  "keywords": [
+    "Website",
+    "Web",
+    "application",
+    "React.js",
+    "Express.js",
+    "Javascript"
+  ],
+  "author": "Kayden Hwang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoonsubHwang/esthers-la/issues"
+  },
+  "homepage": "https://github.com/JoonsubHwang/esthers-la#readme"
+}
