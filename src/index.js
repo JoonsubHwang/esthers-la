@@ -1,26 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import './index.sass';
-import Navbar from './Navbar/Navbar';
-import Footer from './Footer/Footer';
-import Main from './Main/Main';
-import NotFound from './NotFound/NotFound';
+import App from './App/App';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-
-      <Navbar />
-
-      <Switch>
-        <Route exact path='/' component={Main} />
-        <Route component={NotFound} />
-      </Switch>
-
-      <Footer />
-
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
