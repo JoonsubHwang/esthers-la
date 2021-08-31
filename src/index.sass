@@ -18,7 +18,7 @@ $fg-dark-color:    rgb(130, 130, 130)
 $mobile-max-width: 500px
 $tablet-max-width: 900px
 
-// TODO: transformation durations
+// transition durations
 $short-duration: 0.8s
 $long-duration:  0.4s
 
@@ -49,6 +49,7 @@ body
 // TODO: button
 
 
+// @extend
 
 %round-corners
     border-radius: 3%
@@ -56,6 +57,11 @@ body
 %lighter-filter
     filter: brightness(150%)
 
+%short-transition
+    transition: all $short-duration ease
+
+%long-transition
+    transition: all $long-duration ease
+
 // TODO
-// extend: transform
 // extend: small/large/xlarge-font-size (h1)
