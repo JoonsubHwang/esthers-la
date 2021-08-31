@@ -96,4 +96,9 @@ a:link, a:visited
 a:focus, a:hover, a:active
     text-decoration: underline
 
-// TODO: button
+button
+    background: $bg-light-color
+    color: $fg-dark-color
+
+button:focus, button:hover, button:active, .clickable:focus, .clickable:hover, .clickable:active
+    @extend %lighter-filter
