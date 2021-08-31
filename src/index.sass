@@ -75,6 +75,7 @@ body
     box-sizing: border-box
     border: 0
     outline: 0
+    text-decoration: 0
     font-size: 1rem
 
 h1
@@ -89,6 +90,10 @@ h3, h4
 h5, h6
     @extend %small-text
 
-// TODO: a
+a:link, a:visited
+    color: $fg-color
+
+a:focus, a:hover, a:active
+    text-decoration: underline
 
 // TODO: button
