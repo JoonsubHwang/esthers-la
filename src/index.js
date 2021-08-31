@@ -5,12 +5,20 @@ import reportWebVitals from './reportWebVitals';
 import './index.sass';
 import Navbar from './Navbar/Navbar';
 import Footer from './Footer/Footer';
+import Main from './Main/Main';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+
       <Navbar />
+
+      <Switch>
+        <Route exact path='/' component={Main} />
+      </Switch>
+
       <Footer />
+
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
