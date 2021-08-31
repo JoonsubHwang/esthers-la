@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.sass';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
@@ -12,11 +12,13 @@ export default class App extends React.Component {
         <div>
 
             <Navbar />
-    
-            <Switch>
-                <Route exact path='/' component={Main} />
-                <Route component={NotFound} />
-            </Switch>
+
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path='/' component={Main} />
+                    <Route component={NotFound} />
+                </Switch>
+            </BrowserRouter>
     
             <Footer />
 
