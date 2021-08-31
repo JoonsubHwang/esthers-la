@@ -6,6 +6,7 @@ import './index.sass';
 import Navbar from './Navbar/Navbar';
 import Footer from './Footer/Footer';
 import Main from './Main/Main';
+import NotFound from './NotFound/NotFound';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.render(
 
       <Switch>
         <Route exact path='/' component={Main} />
+        <Route component={NotFound} />
       </Switch>
 
       <Footer />
