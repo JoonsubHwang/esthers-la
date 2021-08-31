@@ -1,5 +1,5 @@
 import React from 'react';
-import './navbar.sass';
+import './Navbar.sass';
 
 export default class Navbar extends React.Component {
 
