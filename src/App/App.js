@@ -9,18 +9,16 @@ import NotFound from '../NotFound/NotFound';
 export default class App extends React.Component {
 
     render = () =>
-        <div>
+        <BrowserRouter>
 
             <Navbar />
 
-            <BrowserRouter>
-                <Switch>
-                    <Route exact path='/' component={Main} />
-                    <Route component={NotFound} />
-                </Switch>
-            </BrowserRouter>
+            <Switch>
+                <Route exact path='/' component={Main} />
+                <Route component={NotFound} />
+            </Switch>
     
             <Footer />
 
-        </div>
+        </BrowserRouter>
 }
