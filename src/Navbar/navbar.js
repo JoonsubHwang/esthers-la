@@ -19,7 +19,6 @@ export default class Navbar extends React.Component {
                         <li><a>Library</a></li>
                         <li><a>Tools</a></li>
                     </ul>
-                    <p id='navbar-icon'>M</p>
                 </div>
             </div>
         </div>
