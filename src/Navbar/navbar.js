@@ -13,10 +13,10 @@ export default class Navbar extends React.Component {
                         <p id='navbar-logo-symbol'>LOG</p>
                         <p id='navbar-logo-name'>Esthers.LA</p>
                     </Link>
-                    <div id='navbar-search'>    
+                    <form id='navbar-search'>    
                         <input type='text' placeholder='Character Search'></input>
-                        <Search aria-label='search' />
-                    </div>
+                        <button><Search aria-label='search' /></button>
+                    </form>
                     <ul id='navbar-links'>
                         <li><Link to={'/library'}>Library</Link></li>
                         <li><Link to={'/tools'}>Tools</Link></li>
