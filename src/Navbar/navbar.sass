@@ -1,0 +1,76 @@
+@use '../modules/reusables' as *
+
+
+
+#navbar-main
+    background: $bg-color
+    position: sticky
+    top: 0
+
+    #navbar-container
+        padding: $xsmall-padding
+        
+        #navbar-content
+            $navbar-height: 1.75rem
+            display: flex
+            max-width: 100vh
+            height: $navbar-height
+            margin: 0 auto
+            align-items: center
+
+            #navbar-logo
+                margin-right: $large-padding
+                display: flex
+
+                *    
+                    margin: auto 0
+
+                #navbar-logo-symbol
+                    @extend %hide-on-tablets
+                    margin-right: $xsmall-padding
+            
+            #navbar-search
+                @extend %round-corners
+                display: flex
+                margin: auto
+                padding: 0 $small-padding
+                height: $navbar-height
+                background: $bg-light-color
+                @media screen and (max-width: $tablet-max-width)
+                    margin: 0 0 0 auto
+                    background: 0
+
+                *
+                    margin: auto 0
+
+                p // TODO: change to icon
+                    @media screen and (min-width: $tablet-max-width)
+                        color: $fg-dark-color
+
+                input
+                    @extend %hide-on-tablets
+                    margin-left: $small-padding
+                    width: 20rem
+                    background: $bg-light-color
+                    color: $fg-color
+                
+                ::placeholder
+                    color: $fg-dark-color
+                    opacity: 1
+
+            #navbar-links
+                @extend %hide-on-tablets
+
+                li
+                    margin: 0 $large-padding
+                    float: left
+                    list-style-type: none
+
+                    a
+                        line-height: $navbar-height
+                        background: $bg-color
+
+            #navbar-icon
+                @extend %hide-on-monitors
+                margin: auto 0
+                        
