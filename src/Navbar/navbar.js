@@ -14,8 +14,8 @@ export default class Navbar extends React.Component {
                         <p id='navbar-logo-name'>Esthers.LA</p>
                     </Link>
                     <div id='navbar-search'>    
-                        <Search aria-label='search' />
                         <input type='text' placeholder='Character Search'></input>
+                        <Search aria-label='search' />
                     </div>
                     <ul id='navbar-links'>
                         <li><Link to={'/library'}>Library</Link></li>
