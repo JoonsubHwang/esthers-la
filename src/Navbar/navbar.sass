@@ -12,8 +12,9 @@
         
         #navbar-content
             $navbar-height: 1.75rem
-            @media screen and (max-width: $tablet-max-width)
-                $navbar-height: 2.5rem
+            // FIXME
+            // @media only screen and (max-width: $tablet-max-width)
+            //     $navbar-height: 2.5rem
             display: flex
             max-width: 100vh
             height: $navbar-height
@@ -35,7 +36,7 @@
                 @extend %round-corners
                 display: flex
                 margin: auto
-                @media screen and (max-width: $tablet-max-width)
+                @media only screen and (max-width: $tablet-max-width)
                     margin-right: 0
                 padding: 0 $small-padding
                 height: $navbar-height
