@@ -1,0 +1,55 @@
+// variables
+
+// font
+$font-family: 'Inter', sans-serif
+$small-font-size:  13px
+$medium-font-size: 16px
+$large-font-size:  20px
+$xlarge-font-size: 26px
+
+// colors
+$primary-color:    rgb(205, 0, 85)
+$bg-color:         rgb(10, 10, 10)
+$bg-light-color:   rgb(30, 30, 30)
+$fg-color:         rgb(255, 255, 255)
+$fg-dark-color:    rgb(130, 130, 130)
+
+// screen size breakpoints
+$mobile-max-width: 500px
+$tablet-max-width: 900px
+
+// transition durations
+$short-duration: 0.8s
+$long-duration:  0.4s
+
+// paddings
+$small-padding:  0.75rem
+$medium-padding: 1.25rem
+
+
+
+// @extend
+
+%round-corners
+    border-radius: 3%
+
+%lighter-filter
+    filter: brightness(150%)
+
+%short-transition
+    transition: all $short-duration ease
+
+%long-transition
+    transition: all $long-duration ease
+
+%small-text
+    font-size: $small-font-size
+
+%medium-text
+    font-size: $medium-font-size
+
+%large-text
+    font-size: $large-font-size
+
+%xlarge-text
+    font-size: $xlarge-font-size
