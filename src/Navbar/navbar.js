@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Search } from '@material-ui/icons';
 import './Navbar.sass';
 
 export default class Navbar extends React.Component {
@@ -13,7 +14,7 @@ export default class Navbar extends React.Component {
                         <p id='navbar-logo-name'>Esthers.LA</p>
                     </Link>
                     <div id='navbar-search'>    
-                        <p>Q</p>
+                        <Search aria-label='search' />
                         <input type='text' placeholder='Character Search'></input>
                     </div>
                     <ul id='navbar-links'>
