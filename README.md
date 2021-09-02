@@ -86,23 +86,25 @@ Kayden Joonsub Hwang <br/>
 
 
 
-### 0.0.0 (August 27th, 2021)
+### 0.0.0 
 
-####    New
-- Initialized the project.
-- Created `README.md`
-
-<br/>
-
-### 0.1.0 (September 1st, 2021)
-
-####    New
-- Created App and Navbar
-- Created tests for App and Navbar
-- Created empty components (Main, Footer, and NotFound)
+> ###### August 27th, 2021
+> ####    New
+> - Initialized the project.
+> - Created `README.md`.
 
 <br/>
 
-### 0.2.0 (*In development*)
+### 0.1.0 
+> ###### September 1st, 2021
+> ####    New
+> - Created App and Navbar.
+> - Created tests for App and Navbar.
+> - Created empty components (Main, Footer, and NotFound).
+
+<br/>
+
+### 0.2.0 
+> In development.
 
 <br/><br/>
