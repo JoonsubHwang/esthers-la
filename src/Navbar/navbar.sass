@@ -16,10 +16,12 @@
             // @media only screen and (max-width: $tablet-max-width)
             //     $navbar-height: 2.5rem
             display: flex
+            flex-wrap: wrap
             margin: 0 auto
             max-width: 100vh
             height: $navbar-height
-
+            @media only screen and (max-width: $tablet-max-width)
+                height: 2 * $navbar-height + $xsmall-padding
 
             #navbar-logo
                 margin-right: $large-padding
@@ -60,7 +62,11 @@
                         font-size: 1.25rem
 
             #navbar-links
-                @extend %hide-on-tablets
+                @media only screen and (max-width: $tablet-max-width)
+                    flex-basis: 100%
+                    margin-top: $xsmall-padding
+                    display: flex
+                    justify-content: center
 
                 li
                     margin: 0 $large-padding
