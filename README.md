@@ -39,7 +39,7 @@ Kayden Joonsub Hwang <br/>
 
 - [ ] 0. App
     - [ ] Navbar
-        - [ ] Navigation buttons
+        - [x] Navigation buttons
         - [ ] Select language
         - [ ] Character search
     - [ ] Footer
