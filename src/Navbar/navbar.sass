@@ -32,9 +32,12 @@
 
                 > *
                     margin: auto 0
+
                 #navbar-logo-symbol
-                    @extend %hide-on-tablets
                     margin-right: $xsmall-padding
+                    color: $primary-color // TODO remove
+                    @media screen and (max-width: $mobile-max-width)
+                        display: none
             
             #navbar-search
                 @extend %round-corners
