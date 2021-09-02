@@ -7,10 +7,6 @@ import './Navbar.sass';
 
 export default class Navbar extends React.Component {
 
-    componentDidMount = () => {
-        document.querySelector('#navbar-search>input').focus();
-    }
-
     render = () =>
         <div id='navbar-main'>
             <div id='navbar-container'>
