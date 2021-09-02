@@ -15,12 +15,12 @@ export default class Navbar extends React.Component {
                 <div id='navbar-content'>
 
                     <Link id='navbar-logo' to={'/'}>
-                        <p id='navbar-logo-symbol'>LOG</p>
+                        <p id='navbar-logo-symbol'>Es</p>
                         <p id='navbar-logo-name'>Esthers.LA</p>
                     </Link>
 
                     <form id='navbar-search'>    
-                        <input type='text' placeholder='Character Search'></input>
+                        <input type='text' placeholder='Search Character'></input>
                         <button><Search aria-label='search' /></button>
                     </form>
 
@@ -28,7 +28,7 @@ export default class Navbar extends React.Component {
                         <li><Link to={'/library'}>Library</Link></li>
                         <li><Link to={'/tools'}>Tools</Link></li>
                     </ul>
-                    
+
                 </div>
             </div>
         </div>
