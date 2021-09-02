@@ -18,10 +18,12 @@
             display: flex
             flex-wrap: wrap
             margin: 0 auto
-            max-width: 100vh
             height: $navbar-height
             @media only screen and (max-width: $tablet-max-width)
                 height: 2 * $navbar-height + $xsmall-padding
+            @media only screen and (min-width: $tablet-max-width)
+                min-width: 50rem
+                max-width: 100vh
 
             #navbar-logo
                 margin-right: $large-padding
