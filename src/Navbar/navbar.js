@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Search } from '@material-ui/icons';
 import './Navbar.sass';
 
+
+
 export default class Navbar extends React.Component {
 
     componentDidMount = () => {
@@ -20,13 +22,14 @@ export default class Navbar extends React.Component {
                     </Link>
 
                     <form id='navbar-search'>    
-                        <input type='text' placeholder='Search Character'></input>
+                        <input type='text' placeholder='Search character'></input>
                         <button><Search aria-label='search' /></button>
                     </form>
 
                     <ul id='navbar-links'>
-                        <li><Link to={'/library'}>Library</Link></li>
+                        <li><Link to={'/news'}>News</Link></li>
                         <li><Link to={'/tools'}>Tools</Link></li>
+                        <li><Link to={'/library'}>Library</Link></li>
                     </ul>
 
                 </div>
