@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from './Navbar';
@@ -13,9 +12,9 @@ describe('Navbar', () => {
             </BrowserRouter>
         );
 
-        expect(screen.getByRole('textbox')).toHaveFocus();
+        expect(screen.getByPlaceholderText('Search character')).toBeInTheDocument();
 
-        expect(screen.getAllByRole('link')).toHaveLength(3);
+        expect(screen.getAllByRole('link')).toHaveLength(4);
 
     });
 });
