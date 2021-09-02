@@ -12,14 +12,12 @@
         
         #navbar-content
             $navbar-height: 1.75rem
-            // FIXME
-            // @media only screen and (max-width: $tablet-max-width)
-            //     $navbar-height: 2.5rem
             display: flex
             flex-wrap: wrap
             margin: 0 auto
             height: $navbar-height
             @media only screen and (max-width: $tablet-max-width)
+                // $navbar-height: 2.5rem // TODO: fix
                 height: 2 * $navbar-height + $xsmall-padding
             @media only screen and (min-width: $tablet-max-width)
                 min-width: 55rem
@@ -74,11 +72,13 @@
                     justify-content: center
 
                 li
-                    margin: 0 $large-padding
                     float: left
                     list-style-type: none
+                    @media only screen and (min-width: $tablet-max-width)
+                        padding: 0 $large-padding
 
-                    a
+                    > a > p
+                        @media only screen and (max-width: $tablet-max-width)
+                            padding: 0 $large-padding
                         line-height: $navbar-height
                         background: $bg-color
-                        

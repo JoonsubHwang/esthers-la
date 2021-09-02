@@ -23,9 +23,9 @@ export default class Navbar extends React.Component {
                     </form>
 
                     <ul id='navbar-links'>
-                        <li><Link to={'/news'}>News</Link></li>
-                        <li><Link to={'/tools'}>Tools</Link></li>
-                        <li><Link to={'/library'}>Library</Link></li>
+                        <li><Link to={'/news'}><p>News</p></Link></li>
+                        <li><Link to={'/tools'}><p>Tools</p></Link></li>
+                        <li><Link to={'/library'}><p>Library</p></Link></li>
                     </ul>
 
                 </div>
