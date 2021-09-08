@@ -6,80 +6,77 @@
     background: $bg-color
     position: sticky
     top: 0
-
-    #navbar-container
-        padding: $xsmall-padding
+    padding: $xsmall-padding
         
-        #navbar-content
+    #navbar-content
+        display: flex
+        flex-wrap: wrap
+        margin: 0 auto
+        height: $navbar-height
+        @media only screen and (max-width: $tablet-max-width)
+            height: 2 * $navbar-height + $xsmall-padding
+        @media only screen and (min-width: $tablet-max-width)
+            min-width: 55rem
+            max-width: 100vh
+
+        #navbar-logo
+            margin-right: $large-padding
             display: flex
-            flex-wrap: wrap
-            margin: 0 auto
             height: $navbar-height
+
+            > *
+                margin: auto 0
+                font-family: 'Bebas Neue', serif
+                font-size: 1.4rem
+
+            #navbar-logo-symbol
+                margin-right: $xsmall-padding
+                color: $primary-color // TODO remove
+                @media only screen and (max-width: $tablet-max-width)
+                    display: none
+        
+        #navbar-searchbar
+            @extend %round-corners
+            display: flex
+            margin: auto
             @media only screen and (max-width: $tablet-max-width)
-                // $navbar-height: 2.5rem // TODO: fix
-                height: 2 * $navbar-height + $xsmall-padding
-            @media only screen and (min-width: $tablet-max-width)
-                min-width: 55rem
-                max-width: 100vh
+                margin-right: 0
+            padding: 0 $small-padding
+            height: $navbar-height
+            background: $bg-light-color
 
-            #navbar-logo
-                margin-right: $large-padding
-                display: flex
+            input
+                margin: auto 0
+                margin-right: $small-padding
+                width: 20rem
+                max-width: 35vw
                 height: $navbar-height
 
-                > *
-                    margin: auto 0
-                    font-family: 'Bebas Neue', serif
-                    font-size: 1.4rem
-
-                #navbar-logo-symbol
-                    margin-right: $xsmall-padding
-                    color: $primary-color // TODO remove
-                    @media only screen and (max-width: $tablet-max-width)
-                        display: none
+            button
+                margin: auto 0
+                background: 0
+                color: $fg-dark-color
+                height: $navbar-height
             
-            #navbar-searchbar
-                @extend %round-corners
+                svg
+                    height: $navbar-height
+                    font-size: 1.25rem
+
+        #navbar-links
+            @media only screen and (max-width: $tablet-max-width)
+                flex-basis: 100%
+                margin-top: $xsmall-padding
                 display: flex
-                margin: auto
-                @media only screen and (max-width: $tablet-max-width)
-                    margin-right: 0
-                padding: 0 $small-padding
-                height: $navbar-height
-                background: $bg-light-color
+                justify-content: center
 
-                input
-                    margin: auto 0
-                    margin-right: $small-padding
-                    width: 20rem
-                    max-width: 35vw
-                    height: $navbar-height
+            li
+                float: left
+                list-style-type: none
+                @media only screen and (min-width: $tablet-max-width)
+                    padding: 0 $large-padding
 
-                button
-                    margin: auto 0
-                    background: 0
-                    color: $fg-dark-color
-                    height: $navbar-height
-                
-                    svg
-                        height: $navbar-height
-                        font-size: 1.25rem
-
-            #navbar-links
-                @media only screen and (max-width: $tablet-max-width)
-                    flex-basis: 100%
-                    margin-top: $xsmall-padding
-                    display: flex
-                    justify-content: center
-
-                li
-                    float: left
-                    list-style-type: none
-                    @media only screen and (min-width: $tablet-max-width)
+                p
+                    @media only screen and (max-width: $tablet-max-width)
                         padding: 0 $large-padding
-
-                    p
-                        @media only screen and (max-width: $tablet-max-width)
-                            padding: 0 $large-padding
-                        line-height: $navbar-height
-                        background: $bg-color
+                    line-height: $navbar-height
+                    background: $bg-color
