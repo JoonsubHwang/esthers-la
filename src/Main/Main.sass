@@ -22,4 +22,35 @@
 
         #main-logo-symbol // TODO remove
             margin-right: $xsmall-padding
-            color: $primary-color    
+            color: $primary-color
+
+    #main-searchbar
+        @extend %round-corners
+        $searchbar-height: 4rem
+        @media only screen and (max-width: $phone-max-width)
+            $searchbar-height: 3rem
+        display: flex
+        width: max-content
+        background: $fg-color
+        
+        > *
+            height: $searchbar-height
+            padding: 0 1rem
+            @media only screen and (max-width: $phone-max-width)
+                padding: .5rem
+            background: none
+            color: $bg-color
+
+        input
+            width: 30rem
+            max-width: 70vw
+        
+        ::placeholder
+            color: $bg-light-color
+
+        button
+            display: flex
+            padding-left: 0
+            place-items: center
+
+        
