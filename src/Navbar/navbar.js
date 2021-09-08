@@ -17,7 +17,7 @@ export default class Navbar extends React.Component {
                         <p id='navbar-logo-name'>Esthers.LA</p>
                     </Link>
 
-                    <form id='navbar-search'>    
+                    <form id='navbar-searchbar'>    
                         <input type='text' placeholder='Search character'></input>
                         <button><Search aria-label='search' /></button>
                     </form>
