@@ -8,7 +8,7 @@ import './Navbar.sass';
 export default class Navbar extends React.Component {
 
     render = () =>
-        <div id='navbar-main'>
+        <div id='navbar'>
             <div id='navbar-container'>
                 <div id='navbar-content'>
 
