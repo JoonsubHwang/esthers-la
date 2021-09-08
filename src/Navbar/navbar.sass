@@ -35,6 +35,8 @@
                 #navbar-logo-symbol
                     margin-right: $xsmall-padding
                     color: $primary-color // TODO remove
+                    @media only screen and (max-width: $tablet-max-width)
+                        display: none
             
             #navbar-searchbar
                 @extend %round-corners
