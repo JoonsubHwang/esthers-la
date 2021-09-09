@@ -5,7 +5,7 @@
 #main
 
     min-height: calc(100vh - #{$navbar-height} - #{$footer-height})
-    padding-top: 3rem
+    padding: 3rem 10vw 0
     @include for-laptop-up
         padding-top: 10rem
 
@@ -38,16 +38,16 @@
         
         > *
             height: $searchbar-height
-            padding: 0 0.5rem
+            padding: 0 $xsmall-padding
             @include for-laptop-up
                 height: $searchbar-height-desktop
-                padding: 1rem
+                padding: 1rem // TODO: use variable
             background: none
             color: $fg-color
 
         input
             width: 30rem
-            max-width: calc(80vw - 1.5rem - .5rem)
+            max-width: calc(80vw - 1.5rem - #{$xsmall-padding})
         
         ::placeholder
             color: $fg-dark-color
@@ -56,4 +56,28 @@
             display: flex
             padding-left: 0
             place-items: center
+
+    #menu-list
+        display: flex
+        flex-wrap: wrap
+        max-width: 15rem
+        @include for-laptop-up
+            max-width: 100%
+        place-content: center
+
+        .menu-link
+            display: flex
+            flex-direction: column
+            place-items: center
+            margin: $small-padding $xsmall-padding/2
+            width: 4rem
+
+            svg, g
+                width: 2.5rem
+                height: 2.5rem
+                fill: $fg-color !important
+
+            p
+                font-size: $small-font-size
+
         
