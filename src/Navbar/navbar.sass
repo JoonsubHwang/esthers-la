@@ -12,10 +12,9 @@
         display: flex
         flex-wrap: wrap
         margin: 0 auto
-        height: $navbar-height
-        @media only screen and (max-width: $tablet-max-width)
-            height: 2 * $navbar-height + $xsmall-padding
-        @media only screen and (min-width: $tablet-max-width)
+        height: 2 * $navbar-height + $xsmall-padding
+        @media screen and (min-width: $desktop-min-width)
+            height: $navbar-height
             min-width: 55rem
             max-width: 100vh
 
@@ -30,17 +29,19 @@
                 font-size: 1.8rem
 
             #navbar-logo-symbol
+                display: none
                 margin-right: $xsmall-padding
                 color: $primary-color // TODO remove
-                @media only screen and (max-width: $tablet-max-width)
-                    display: none
+                @media screen and (min-width: $desktop-min-width)
+                    display: block
         
         #navbar-searchbar
             @extend %round-corners
             display: flex
             margin: auto
-            @media only screen and (max-width: $tablet-max-width)
-                margin-right: 0
+            margin-right: 0
+            @media screen and (min-width: $desktop-min-width)
+                margin-right: auto
             padding: 0 $small-padding
             height: $navbar-height
             background: $bg-light-color
@@ -63,20 +64,23 @@
                     font-size: 1.25rem
 
         #navbar-links
-            @media only screen and (max-width: $tablet-max-width)
-                flex-basis: 100%
-                margin-top: $xsmall-padding
-                display: flex
-                justify-content: center
+            flex-basis: 100%
+            margin-top: $xsmall-padding
+            display: flex
+            justify-content: center
+            @media screen and (min-width: $desktop-min-width)
+                flex-basis: auto
+                margin: auto
 
             li
                 float: left
                 list-style-type: none
-                @media only screen and (min-width: $tablet-max-width)
+                @media screen and (min-width: $desktop-min-width)
                     padding: 0 $large-padding
 
                 p
-                    @media only screen and (max-width: $tablet-max-width)
-                        padding: 0 $large-padding
+                    padding: 0 $large-padding
+                    @media only screen and (min-width: $desktop-min-width)
+                        padding: 0
                     line-height: $navbar-height
                     background: $bg-color

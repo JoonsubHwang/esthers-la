@@ -5,15 +5,15 @@
 #main
 
     min-height: calc(100vh - #{$navbar-height} - #{$footer-height})
-    padding-top: 10rem
-    @media only screen and (max-width: $phone-max-width)
-        padding-top: 3rem
+    padding-top: 3rem
+    @media screen and (min-width: $desktop-min-width)
+        padding-top: 10rem
 
     > *
-        margin: 3rem auto
+        margin: 2rem auto
         width: max-content
-        @media only screen and (max-width: $phone-max-width)
-            margin: 2rem auto
+        @media screen and (min-width: $desktop-min-width)
+            margin: 3rem auto
 
     #main-logo // TODO remove
         display: flex
@@ -28,19 +28,20 @@
 
     #main-searchbar
         @extend %round-corners
-        $searchbar-height: 4rem
+        $searchbar-height: 3rem
+        $searchbar-height-desktop: 4rem
         display: flex
         background: $primary-color
-        margin-bottom: 8rem
-        @media only screen and (max-width: $phone-max-width)
-            $searchbar-height: 3rem
-            margin-bottom: 6rem
+        margin-bottom: 6rem
+        @media screen and (min-width: $desktop-min-width)
+            margin-bottom: 8rem
         
         > *
             height: $searchbar-height
-            padding: 0 1rem
-            @media only screen and (max-width: $phone-max-width)
-                padding: .5rem
+            padding: 0 0.5rem
+            @media screen and (min-width: $desktop-min-width)
+                height: $searchbar-height-desktop
+                padding: 1rem
             background: none
             color: $fg-color
 
