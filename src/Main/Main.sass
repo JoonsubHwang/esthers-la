@@ -5,7 +5,9 @@
 #main
 
     min-height: calc(100vh - #{$navbar-height} - #{$footer-height})
-    padding: 0 10vw
+    padding: 12vh 10vw 0
+    @include for-smallest-phone
+        padding-top: 0
     @include for-laptop-up
         padding-top: 10rem
 
@@ -32,7 +34,7 @@
         $searchbar-height-laptop: 4rem
         display: flex
         background: $primary-color
-        margin-bottom: 4rem
+        margin-bottom: 14vh
         @include for-laptop-up
             margin-bottom: 8rem
         
