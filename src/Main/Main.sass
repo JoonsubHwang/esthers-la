@@ -36,14 +36,14 @@
         background: $primary-color
         margin-bottom: 14vh
         @include for-laptop-up
-            margin-bottom: 8rem
+            margin-bottom: calc(100vh - #{$navbar-height} - (2 * #{$xsmall-padding}) - 10rem - 6vh - 4rem - 4rem - (3 * 2rem)) 
         
         > *
             height: $searchbar-height
             padding: 0 $xsmall-padding
             @include for-laptop-up
                 height: $searchbar-height-laptop
-                padding: 1rem // TODO: use variable
+                padding: 1rem
             background: none
             color: $fg-color
 
@@ -68,6 +68,7 @@
         max-width: calc(3 * 4rem + #{2 * $gap})
         @include for-laptop-up
             column-gap: $gap-laptop
+            height: 4rem
             max-width: 100%
         place-content: center
 
