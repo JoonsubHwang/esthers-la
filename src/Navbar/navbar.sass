@@ -13,7 +13,7 @@
         flex-wrap: wrap
         margin: 0 auto
         height: 2 * $navbar-height + $xsmall-padding
-        @media screen and (min-width: $desktop-min-width)
+        @include for-laptop-up
             height: $navbar-height
             min-width: 55rem
             max-width: 100vh
@@ -32,7 +32,7 @@
                 display: none
                 margin-right: $xsmall-padding
                 color: $primary-color // TODO remove
-                @media screen and (min-width: $desktop-min-width)
+                @include for-laptop-up
                     display: block
         
         #navbar-searchbar
@@ -40,7 +40,7 @@
             display: flex
             margin: auto
             margin-right: 0
-            @media screen and (min-width: $desktop-min-width)
+            @include for-laptop-up
                 margin-right: auto
             padding: 0 $small-padding
             height: $navbar-height
@@ -68,19 +68,19 @@
             margin-top: $xsmall-padding
             display: flex
             justify-content: center
-            @media screen and (min-width: $desktop-min-width)
+            @include for-laptop-up
                 flex-basis: auto
                 margin: auto
 
             li
                 float: left
                 list-style-type: none
-                @media screen and (min-width: $desktop-min-width)
+                @include for-laptop-up
                     padding: 0 $large-padding
 
                 p
                     padding: 0 $large-padding
-                    @media only screen and (min-width: $desktop-min-width)
+                    @include for-laptop-up
                         padding: 0
                     line-height: $navbar-height
                     background: $bg-color

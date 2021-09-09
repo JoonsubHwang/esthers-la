@@ -16,8 +16,8 @@ $fg-dark-color:    rgb(200, 200, 200)
 $fg-darker-color:    rgb(130, 130, 130)
 
 // screen size breakpoints
-$tablet-min-width: 700px
-$desktop-min-width: 1200px
+$tablet-min-width: 768px
+$laptop-min-width: 1140px
 
 // transition durations
 $short-duration: 0.4s
@@ -61,3 +61,15 @@ $footer-height: 8rem
 
 %xlarge-text
     font-size: $xlarge-font-size
+
+
+
+// @mixin
+
+@mixin for-tablet-up
+    @media screen and (min-width: $tablet-min-width) 
+        @content
+
+@mixin for-laptop-up
+    @media screen and (min-width: $laptop-min-width) 
+        @content

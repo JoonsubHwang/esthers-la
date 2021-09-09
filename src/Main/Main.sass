@@ -6,13 +6,13 @@
 
     min-height: calc(100vh - #{$navbar-height} - #{$footer-height})
     padding-top: 3rem
-    @media screen and (min-width: $desktop-min-width)
+    @include for-laptop-up
         padding-top: 10rem
 
     > *
         margin: 2rem auto
         width: max-content
-        @media screen and (min-width: $desktop-min-width)
+        @include for-laptop-up
             margin: 3rem auto
 
     #main-logo // TODO remove
@@ -33,13 +33,13 @@
         display: flex
         background: $primary-color
         margin-bottom: 6rem
-        @media screen and (min-width: $desktop-min-width)
+        @include for-laptop-up
             margin-bottom: 8rem
         
         > *
             height: $searchbar-height
             padding: 0 0.5rem
-            @media screen and (min-width: $desktop-min-width)
+            @include for-laptop-up
                 height: $searchbar-height-desktop
                 padding: 1rem
             background: none
