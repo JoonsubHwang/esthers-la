@@ -4,19 +4,19 @@
 
 #main
 
-    height: calc(100vh - #{$navbar-height} - #{$footer-height})
-    padding: 10rem 0
+    min-height: calc(100vh - #{$navbar-height} - #{$footer-height})
+    padding-top: 10rem
     @media only screen and (max-width: $phone-max-width)
-        padding: 3rem 0
+        padding-top: 3rem
 
     > *
         margin: 3rem auto
+        width: max-content
         @media only screen and (max-width: $phone-max-width)
             margin: 2rem auto
 
     #main-logo // TODO remove
         display: flex
-        width: max-content
 
         > * // TODO: remove
             font-size: 6vh
@@ -29,11 +29,10 @@
     #main-searchbar
         @extend %round-corners
         $searchbar-height: 4rem
+        display: flex
+        background: $primary-color
         @media only screen and (max-width: $phone-max-width)
             $searchbar-height: 3rem
-        display: flex
-        width: max-content
-        background: $fg-color
         
         > *
             height: $searchbar-height
@@ -41,18 +40,17 @@
             @media only screen and (max-width: $phone-max-width)
                 padding: .5rem
             background: none
-            color: $bg-color
+            color: $fg-color
 
         input
             width: 30rem
             max-width: calc(80vw - 1.5rem - .5rem)
         
         ::placeholder
-            color: $bg-light-color
+            color: $fg-dark-color
 
         button
             display: flex
             padding-left: 0
             place-items: center
-
         
