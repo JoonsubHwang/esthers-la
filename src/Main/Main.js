@@ -17,7 +17,7 @@ export default class Main extends React.Component {
             </Link>
 
             <form id='main-searchbar'>    
-                <input type='text' placeholder='Search'></input>
+                <input type='text' placeholder='Search character'></input>
                 <button><Search aria-label='search' /></button>
             </form>
 
