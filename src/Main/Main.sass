@@ -60,7 +60,9 @@
     #menu-list
         display: flex
         flex-wrap: wrap
-        max-width: 15rem
+        $gap: 6vw
+        column-gap: $gap
+        max-width: calc(3 * 4rem + #{2 * $gap})
         @include for-laptop-up
             max-width: 100%
         place-content: center
@@ -69,8 +71,9 @@
             display: flex
             flex-direction: column
             place-items: center
-            margin: $small-padding $xsmall-padding/2
+            margin-bottom: $gap
             width: 4rem
+            height: 4rem
 
             svg, g
                 width: 2.5rem
