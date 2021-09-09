@@ -79,7 +79,9 @@
                     padding: 0 $large-padding
 
                 p
-                    padding: 0 $large-padding
+                    padding: 0 6vw
+                    @include for-tablet-up
+                        padding: 0 8vw
                     @include for-laptop-up
                         padding: 0
                     line-height: $navbar-height
