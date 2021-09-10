@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Search } from '@material-ui/icons';
 import './Navbar.sass';
+import { menuList } from '../modules/menuList';
 
 
 
@@ -22,9 +23,9 @@ export default class Navbar extends React.Component {
                 </form>
 
                 <ul id='navbar-links'>
-                    <li><Link to={'/news'}><p>News</p></Link></li>
-                    <li><Link to={'/tools'}><p>Tools</p></Link></li>
-                    <li><Link to={'/library'}><p>Library</p></Link></li>
+                    {menuList.map(menu =>
+                        <li><Link to={menu.url}><p>{menu.name}</p></Link></li>
+                    )}
                 </ul>
 
             </div>
