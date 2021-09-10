@@ -43,13 +43,13 @@
             padding: 0 $xsmall-padding
             @include for-laptop-up
                 height: $searchbar-height-laptop
-                padding: 1rem
+                padding: $medium-padding
             background: none
             color: $fg-color
 
         input
             width: 40rem
-            max-width: calc(80vw - 1.5rem - #{$xsmall-padding})
+            max-width: calc(80vw - 1.5rem - (3 * #{$xsmall-padding}))
         
         ::placeholder
             color: $fg-dark-color
