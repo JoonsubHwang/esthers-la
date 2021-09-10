@@ -11,6 +11,7 @@ import {ReactComponent as AI} from '../images/ai.svg';
 export const menuList = [
     {
         name: 'News',
+        url: '/news',
         submenus: [
             {
                 name: 'Updates',
@@ -31,6 +32,7 @@ export const menuList = [
     },
     {
         name: 'Library',
+        url: '/library',
         submenus: [
             {
                 name: 'Equip\'s',
@@ -56,6 +58,7 @@ export const menuList = [
     },
     {
         name: 'Tools',
+        url: '/tools',
         submenus: [
             {
                 name: 'SealCalc',
