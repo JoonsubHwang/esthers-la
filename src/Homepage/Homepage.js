@@ -12,7 +12,7 @@ let allSubmenus = menuList.reduce((total, menu) => [...total, ...menu.submenus],
 export default class Homepage extends React.Component {
 
     render = () =>
-        <homepage id='homepage'>
+        <div id='homepage'>
 
             <Link id='homepage-logo' to={'/'}>
                 <p id='homepage-logo__symbol'>Es</p>
@@ -30,5 +30,5 @@ export default class Homepage extends React.Component {
                 )}
             </div>
 
-        </homepage>
+        </div>
 }
