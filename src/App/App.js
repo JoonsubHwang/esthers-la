@@ -2,9 +2,15 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.sass';
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import Homepage from '../Homepage/Homepage';
 import NotFound from '../NotFound/NotFound';
+import Footer from '../Footer/Footer';
+import Navbar from '../Navbar/Navbar';
+import minWidth from '../modules/minWidth';
+
+
+
+const vw = window.innerWidth || document.documentElement.clientWidth || 0;
 
 export default class App extends React.Component {
 
@@ -19,6 +25,10 @@ export default class App extends React.Component {
             </Switch>
     
             <Footer />
+            
+            { vw < minWidth.laptop ?
+                <Navbar />
+                : null}
 
         </BrowserRouter>
 }
