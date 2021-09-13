@@ -32,17 +32,3 @@
                     display: none
                 margin-right: $xsmall-padding
                 color: $primary-color // TODO remove
-
-    #searchbar
-        margin: auto
-        margin-right: 0
-        @include for-laptop-up
-            margin-right: auto
-            // margin-right: calc(50vh - ((20rem + 1.25rem + (3 * #{$small-padding})) / 2)) // TODO: remove
-        background: $bg-light-color
-
-        input
-            width: 20rem
-            max-width: calc(100vw - 11rem - 1.25rem - (3 * #{$small-padding}))
-            @include for-narrowest-phone
-                max-width: calc(100vw - 9rem - 1.25rem - (3 * #{$small-padding}))
