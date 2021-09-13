@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { Search } from '@material-ui/icons';
 import { menuList } from '../modules/menuList';
 import './Homepage.sass';
+import Searchbar from '../Searchbar/Searchbar';
+
+
 
 let allSubmenus = menuList.reduce((total, menu) => [...total, ...menu.submenus], []);
 
@@ -16,10 +19,7 @@ export default class Homepage extends React.Component {
                 <p id='homepage-logo__name'>Esthers.LA</p>
             </Link>
 
-            <form id='homepage-searchbar'>    
-                <input type='text' placeholder='Search character'></input>
-                <button><Search aria-label='search' /></button>
-            </form>
+            <Searchbar />
 
             <div id='menu-list'>
                 {allSubmenus.map(submenu =>

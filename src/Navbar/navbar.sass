@@ -3,86 +3,25 @@
 
 
 #navbar
-    background: $bg-color
-    position: sticky
-    top: 0
-    padding: $xsmall-padding
-        
-    #navbar-content
-        display: flex
-        flex-wrap: wrap
-        margin: 0 auto
-        height: 2 * $navbar-height + $xsmall-padding
+    flex-basis: 100%
+    margin-top: $xsmall-padding
+    display: flex
+    justify-content: center
+    @include for-laptop-up
+        flex-basis: auto
+        margin: auto
+
+    li
+        float: left
+        list-style-type: none
         @include for-laptop-up
-            height: $navbar-height
-            min-width: 55rem
-            max-width: 100vh
+            padding: 0 $large-padding
 
-        #navbar-logo
-            margin-right: $large-padding
-            display: flex
-            height: $navbar-height
-
-            > *
-                margin: auto 0
-                font-family: 'Bebas Neue', serif
-                font-size: 1.8rem
-
-            #navbar-logo__symbol
-                display: none
-                margin-right: $xsmall-padding
-                color: $primary-color // TODO remove
-                @include for-laptop-up
-                    display: block
-        
-        #navbar-searchbar
-            @extend %round-corners
-            display: flex
-            margin: auto
-            margin-right: 0
+        p
+            padding: 0 6vw
+            @include for-tablet-up
+                padding: 0 8vw
             @include for-laptop-up
-                margin-right: auto
-            padding: 0 $small-padding
-            height: $navbar-height
-            background: $bg-light-color
-
-            input
-                margin: auto 0
-                margin-right: $small-padding
-                width: 20rem
-                max-width: 35vw
-                height: $navbar-height
-
-            button
-                margin: auto 0
-                background: 0
-                color: $fg-dark-color
-                height: $navbar-height
-            
-                svg
-                    height: $navbar-height
-                    font-size: 1.25rem
-
-        #navbar-links
-            flex-basis: 100%
-            margin-top: $xsmall-padding
-            display: flex
-            justify-content: center
-            @include for-laptop-up
-                flex-basis: auto
-                margin: auto
-
-            li
-                float: left
-                list-style-type: none
-                @include for-laptop-up
-                    padding: 0 $large-padding
-
-                p
-                    padding: 0 6vw
-                    @include for-tablet-up
-                        padding: 0 8vw
-                    @include for-laptop-up
-                        padding: 0
-                    line-height: $navbar-height
-                    background: $bg-color
+                padding: 0
+            line-height: $header-height
+            background: $bg-color

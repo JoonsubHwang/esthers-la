@@ -4,7 +4,7 @@
 
 #homepage
 
-    min-height: calc(100vh - #{$navbar-height})
+    min-height: calc(100vh - #{$header-height})
     padding: 12vh 10vw 0
     @include for-smallest-phone
         padding-top: 0
@@ -21,43 +21,46 @@
         display: flex
 
         > * // TODO: remove
-            font-size: 6vh
+            font-size: 2.5rem
+            @include for-laptop-up
+                font-size: 3.5rem
             font-family: 'Bebas Neue', serif
 
         #homepage-logo__symbol // TODO remove
             margin-right: $xsmall-padding
             color: $primary-color
 
-    #homepage-searchbar
-        @extend %round-corners
+    #searchbar
         $searchbar-height: 3rem
         $searchbar-height-laptop: 4rem
-        display: flex
         background: $primary-color
         margin-bottom: 14vh
         @include for-laptop-up
-            margin-bottom: calc(100vh - #{$navbar-height} - (2 * #{$xsmall-padding}) - 10rem - 6vh - 4rem - 4rem - (3 * 2rem)) 
+            margin-bottom: calc(100vh - #{$header-height} - (2 * #{$xsmall-padding}) - 10rem - 3.5rem - 4rem - 4rem - (3 * 2rem)) 
         
         > *
             height: $searchbar-height
-            padding: 0 $xsmall-padding
             @include for-laptop-up
                 height: $searchbar-height-laptop
-                padding: $medium-padding
-            background: none
-            color: $fg-color
 
         input
             width: 40rem
-            max-width: calc(80vw - 1.5rem - (3 * #{$xsmall-padding}))
+            max-width: calc(80vw - 1.5rem - (5 * #{$xsmall-padding}))
+            @include for-laptop-up
+                padding: $xsmall-padding
         
             &::placeholder
-                color: $fg-dark-color
+                color: $bg-color
 
         button
-            display: flex
-            padding-left: 0
-            place-items: center
+            padding-left: $xsmall-padding
+            @include for-laptop-up
+                padding-right: $xsmall-padding
+            color: $bg-color
+
+            svg
+                @include for-laptop-up
+                    font-size: 1.5rem
 
     #menu-list
         display: flex
