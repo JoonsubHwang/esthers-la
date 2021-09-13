@@ -51,8 +51,8 @@
             width: 40rem
             max-width: calc(80vw - 1.5rem - (3 * #{$xsmall-padding}))
         
-        ::placeholder
-            color: $fg-dark-color
+            &::placeholder
+                color: $fg-dark-color
 
         button
             display: flex
@@ -73,12 +73,17 @@
         place-content: center
 
         .menu-link
+            @extend %short-transition
             display: flex
             flex-direction: column
             place-items: center
             margin-bottom: $gap
             width: 4rem
             height: 4rem
+
+            @include for-laptop-up
+                &:hover
+                    margin-top: -$medium-padding
 
             svg, g
                 width: 2.5rem
