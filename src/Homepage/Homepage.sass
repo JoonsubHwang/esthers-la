@@ -7,7 +7,7 @@
     min-height: calc(100vh - #{$header-height})
     padding: 12vh 10vw 0
     @include for-shortest-phone
-        padding-top: 0
+        padding-top: 4vh
     @include for-laptop-up
         padding-top: 10rem
 
@@ -35,6 +35,8 @@
         $searchbar-height-laptop: 4rem
         background: $primary-color
         margin-bottom: 14vh
+        @include for-shortest-phone
+            margin-bottom: 12vh
         @include for-laptop-up
             margin-bottom: calc(100vh - #{$header-height} - (2 * #{$xsmall-padding}) - 10rem - 3.5rem - 4rem - 4rem - (3 * 2rem)) 
         
