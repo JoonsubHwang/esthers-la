@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import './Header.sass';
 import Searchbar from '../Searchbar/Searchbar';
 import Navbar from '../Navbar/Navbar';
+import minWidth from '../modules/minWidth';
 
 
+
+const vw = window.innerWidth || document.documentElement.clientWidth || 0;
 
 export default class Header extends React.Component {
 
@@ -19,7 +22,9 @@ export default class Header extends React.Component {
 
                 <Searchbar />
 
-                {/* <Navbar /> */}
+                { vw >= minWidth.laptop ?
+                    <Navbar />
+                    : null}
 
             </div>
         </div>
