@@ -26,9 +26,10 @@ Kayden Joonsub Hwang <br/>
 
 
 ## Technologies Used
-- JavaScript, HTML, CSS
-- Node.js
 - React.js
+- JavaScript
+- SASS
+- Node.js
 - Express.js
 - MongoDB
 
