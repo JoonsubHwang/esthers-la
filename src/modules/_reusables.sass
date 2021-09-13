@@ -66,6 +66,10 @@ $footer-height: 8rem
 
 // @mixin
 
+@mixin for-narrowest-phone
+    @media screen and (max-width: 350px) 
+        @content
+
 @mixin for-shortest-phone
     @media screen and (max-height: 600px) 
         @content
