@@ -38,7 +38,7 @@
         @include for-shortest-phone
             margin-bottom: 12vh
         @include for-laptop-up
-            margin-bottom: calc(100vh - #{$header-height} - (2 * #{$xsmall-padding}) - 10rem - 3.5rem - 4rem - 4rem - (3 * 2rem)) 
+            margin-bottom: calc(100vh - #{$header-height} - (2 * #{$xsmall-padding}) - 10rem - 3.5rem - 4rem - calc(4rem + #{$small-padding}) - (2 * 2rem) - 4rem) 
         
         > *
             height: $searchbar-height
@@ -72,7 +72,7 @@
         max-width: calc(3 * (4rem + #{$gap}))
         @include for-laptop-up
             $gap: $small-padding
-            height: 4rem
+            height: calc(4rem + #{$gap})
             max-width: 100%
         place-content: center
 
