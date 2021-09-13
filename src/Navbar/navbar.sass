@@ -3,13 +3,23 @@
 
 
 #navbar
+    z-index: 1
     flex-basis: 100%
-    margin-top: $xsmall-padding
     display: flex
+    position: sticky
+    bottom: 0
+    height: 3rem
     justify-content: center
+    background: rgba(10, 10, 10, 0.8)
     @include for-laptop-up
+        z-index: auto
         flex-basis: auto
+        position: inherit
+        bottom: auto
+        margin-top: $xsmall-padding
         margin: auto
+        height: $header-height
+        background: none
 
     li
         float: left
@@ -19,9 +29,17 @@
 
         p
             padding: 0 6vw
+            line-height: 3rem
             @include for-tablet-up
                 padding: 0 8vw
             @include for-laptop-up
                 padding: 0
-            line-height: $header-height
-            background: $bg-color
+                line-height: $header-height
+
+    li:nth-child(1) 
+        p
+            border-radius: 0.2rem 0 0 0.2rem
+
+    li:nth-child(3) 
+        p
+            border-radius: 0 0.2rem 0.2rem 0
