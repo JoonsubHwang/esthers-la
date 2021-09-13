@@ -27,11 +27,10 @@
                 font-size: 1.8rem
 
             #header-logo__symbol
-                display: none // TODO: move to js
+                @include for-narrowest-phone
+                    display: none
                 margin-right: $xsmall-padding
                 color: $primary-color // TODO remove
-                @include for-laptop-up
-                    display: block
 
     #searchbar
         margin: auto
@@ -43,4 +42,6 @@
 
         input
             width: 20rem
-            max-width: calc(100vw - 9rem - 1.25rem - (3 * #{$small-padding}))
+            max-width: calc(100vw - 11rem - 1.25rem - (3 * #{$small-padding}))
+            @include for-narrowest-phone
+                max-width: calc(100vw - 9rem - 1.25rem - (3 * #{$small-padding}))
