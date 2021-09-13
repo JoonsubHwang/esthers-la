@@ -13,8 +13,8 @@ export default class Navbar extends React.Component {
             <div id='navbar-content'>
 
                 <Link id='navbar-logo' to={'/'}>
-                    <p id='navbar-logo-symbol'>Es</p>
-                    <p id='navbar-logo-name'>Esthers.LA</p>
+                    <p id='navbar-logo__symbol'>Es</p>
+                    <p id='navbar-logo__name'>Esthers.LA</p>
                 </Link>
 
                 <form id='navbar-searchbar'>    
