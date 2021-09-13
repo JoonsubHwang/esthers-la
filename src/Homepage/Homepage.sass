@@ -69,10 +69,9 @@
         flex-wrap: wrap
         $gap: 6vw
         $gap-laptop: $small-padding
-        column-gap: $gap
-        max-width: calc(3 * 4rem + #{2 * $gap})
+        max-width: calc(3 * (4rem + #{$gap}))
         @include for-laptop-up
-            column-gap: $gap-laptop
+            $gap: $small-padding
             height: 4rem
             max-width: 100%
         place-content: center
@@ -82,10 +81,9 @@
             display: flex
             flex-direction: column
             place-items: center
-            margin-bottom: $gap
-            width: 4rem
-            height: 4rem
-
+            width: calc(4rem + #{$gap})
+            height: calc(4rem + #{$gap})
+            padding: $gap / 2
             @include for-laptop-up
                 &:hover
                     margin-top: -$medium-padding
