@@ -2,7 +2,7 @@
 
 
 
-#main
+#homepage
 
     min-height: calc(100vh - #{$navbar-height})
     padding: 12vh 10vw 0
@@ -17,18 +17,18 @@
         @include for-laptop-up
             margin: 3rem auto
 
-    #main-logo // TODO remove
+    #homepage-logo // TODO remove
         display: flex
 
         > * // TODO: remove
             font-size: 6vh
             font-family: 'Bebas Neue', serif
 
-        #main-logo-symbol // TODO remove
+        #homepage-logo-symbol // TODO remove
             margin-right: $xsmall-padding
             color: $primary-color
 
-    #main-searchbar
+    #homepage-searchbar
         @extend %round-corners
         $searchbar-height: 3rem
         $searchbar-height-laptop: 4rem

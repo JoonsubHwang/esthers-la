@@ -2,21 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Search } from '@material-ui/icons';
 import { menuList } from '../modules/menuList';
-import './Main.sass';
+import './Homepage.sass';
 
 let allSubmenus = menuList.reduce((total, menu) => [...total, ...menu.submenus], []);
 
-export default class Main extends React.Component {
+export default class Homepage extends React.Component {
 
     render = () =>
-        <main id='main'>
+        <homepage id='homepage'>
 
-            <Link id='main-logo' to={'/'}>
-                <p id='main-logo-symbol'>Es</p>
-                <p id='main-logo-name'>Esthers.LA</p>
+            <Link id='homepage-logo' to={'/'}>
+                <p id='homepage-logo-symbol'>Es</p>
+                <p id='homepage-logo-name'>Esthers.LA</p>
             </Link>
 
-            <form id='main-searchbar'>    
+            <form id='homepage-searchbar'>    
                 <input type='text' placeholder='Search character'></input>
                 <button><Search aria-label='search' /></button>
             </form>
@@ -30,5 +30,5 @@ export default class Main extends React.Component {
                 )}
             </div>
 
-        </main>
+        </homepage>
 }
