@@ -11,6 +11,15 @@ const vw = window.innerWidth || document.documentElement.clientWidth || 0;
 
 export default class Header extends React.Component {
 
+    componentDidMount() {
+        window.addEventListener('keypress', event => {
+            if (event.key == '/') {
+                event.preventDefault();
+                document.querySelector('#header .searchbar input').focus();
+            }
+        });
+    }
+
     render = () =>
         <div id='header'>
             <div id='header-content'>
