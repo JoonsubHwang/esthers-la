@@ -16,7 +16,7 @@ export default class Homepage extends React.Component {
     }
 
     render = () =>
-        <div id='homepage'>
+        <main id='homepage'>
 
             <Link id='homepage-logo' to={'/'}>
                 <p id='homepage-logo__symbol'>Es</p>
@@ -34,5 +34,5 @@ export default class Homepage extends React.Component {
                 )}
             </div>
 
-        </div>
+        </main>
 }
