@@ -49,13 +49,15 @@
             width: 40rem
             max-width: calc(80vw - 1.5rem - (5 * #{$xsmall-padding}))
             @include for-laptop-up
-                padding: $xsmall-padding
+                padding-left: $medium-padding
         
             &::placeholder
                 color: $bg-color
 
         button
             color: $bg-color
+            @include for-laptop-up
+                padding: 0 $medium-padding
 
             svg
                 @include for-laptop-up
