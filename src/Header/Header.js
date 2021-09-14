@@ -13,7 +13,7 @@ export default class Header extends React.Component {
 
     componentDidMount() {
         window.addEventListener('keypress', event => {
-            if (event.key == '/') {
+            if (event.key === '/') {
                 event.preventDefault();
                 document.querySelector('#header .searchbar input').focus();
             }
