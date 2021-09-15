@@ -29,7 +29,7 @@ export default class Header extends React.Component {
                     <p id='header-logo__name'>Esthers.LA</p>
                 </Link>
 
-                <Searchbar />
+                <div><Searchbar /></div>
 
                 { vw >= minWidth.laptop ?
                     <Navbar />
