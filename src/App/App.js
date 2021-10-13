@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.sass';
 import Header from '../Header/Header';
 import Homepage from '../Homepage/Homepage';
+import CharInfo from '../CharInfo/CharInfo';
 import NotFound from '../NotFound/NotFound';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
@@ -21,6 +22,7 @@ export default class App extends React.Component {
 
             <Switch>
                 <Route exact path='/' component={Homepage} />
+                <Route exact path='/characters/:charName' component={CharInfo} />
                 <Route component={NotFound} />
             </Switch>
     
