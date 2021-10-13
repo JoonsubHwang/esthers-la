@@ -26,8 +26,8 @@ export default class Homepage extends React.Component {
             <Searchbar />
 
             <div id='menu-list'>
-                {allSubmenus.map(submenu =>
-                    <Link class='menu-list__link' to={submenu.url}>
+                {allSubmenus.map((submenu, i) =>
+                    <Link key={'submenu-' + i} className='menu-list__link' to={submenu.url}>
                         {submenu.icon || <Search />}
                         <p>{submenu.name}</p>
                     </Link>
