@@ -16,7 +16,7 @@ class Searchbar extends React.Component {
     render = () =>
 
         <form className='searchbar' onSubmit={this.searchCharacter}>    
-            <input type='text' placeholder='Search character'></input>
+            <input type='text' placeholder='Search character' required minLength={3}></input>
             <button><Search aria-label='search' /></button>
         </form>
 }
