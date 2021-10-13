@@ -18,6 +18,10 @@ body
     -moz-osx-font-smoothing: grayscale
     text-rendering: optimizeSpeed
 
+main
+    min-height: calc(100vh - #{$header-height})
+    padding: $xsmall-padding 5vw
+
 *
     margin: 0
     padding: 0
@@ -63,9 +67,8 @@ input
     color: $fg-darker-color
     opacity: 1
 
-main
-    min-height: calc(100vh - #{$header-height})
-    padding: $xsmall-padding 5vw
+ul
+    list-style: none
 
 
 
