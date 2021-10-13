@@ -12,9 +12,7 @@ describe('Navbar', () => {
             </BrowserRouter>
         );
 
-        expect(screen.getByPlaceholderText('Search character')).toBeInTheDocument();
-
-        expect(screen.getAllByRole('link')).toHaveLength(4);
+        expect(screen.getAllByRole('link')).toHaveLength(3);
 
     });
 });
