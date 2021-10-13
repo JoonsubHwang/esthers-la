@@ -14,7 +14,7 @@ describe('App', () => {
 
         userEvent.click(screen.getByText('Library'));
 
-        expect(screen.getByText('NOTFOUND')).toBeInTheDocument();
+        expect(screen.getByText('NOT FOUND')).toBeInTheDocument();
 
     });
 
