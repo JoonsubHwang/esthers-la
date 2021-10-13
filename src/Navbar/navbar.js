@@ -10,8 +10,8 @@ export default class Navbar extends React.Component {
     render = () =>
 
         <ul id='navbar'>
-            {menuList.map(menu =>
-                <li><Link to={menu.url}><p>{menu.name}</p></Link></li>
+            {menuList.map((menu, i) =>
+                <li key={'navlink-' + i}><Link to={menu.url}><p>{menu.name}</p></Link></li>
             )}
         </ul>
 }
