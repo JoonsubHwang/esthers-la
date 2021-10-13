@@ -11,10 +11,6 @@ let allSubmenus = menuList.reduce((total, menu) => [...total, ...menu.submenus],
 
 export default class Homepage extends React.Component {
 
-    componentDidMount() {
-        document.querySelector('#homepage .searchbar input').focus();
-    }
-
     render = () =>
         <main id='homepage'>
 
