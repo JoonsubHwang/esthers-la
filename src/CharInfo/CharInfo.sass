@@ -1,0 +1,45 @@
+@use '../modules/reusables' as *
+
+
+
+#charinfo
+    #summary
+        margin-bottom: $large-padding
+
+        *
+            margin-bottom: $xxsmall-padding
+
+        h1
+            margin-bottom: $xsmall-padding
+
+    #details
+        #categories, #subcategories
+            display: flex
+
+            li
+                text-align: center
+                font-size: $small-font-size
+                color: $fg-dark-color
+
+                &.selected
+                    color: $fg-color
+
+        #categories
+            margin-bottom: $xsmall-padding
+
+            li
+                width: 25%
+                padding: $small-padding
+
+                &.selected
+                    border-bottom: 1px solid $primary-color
+
+        #subcategories
+            margin-bottom: $medium-padding
+
+            li
+                padding: $small-padding $small-padding
+
+                &.selected
+                    border-bottom: 1px solid $fg-color
+    
