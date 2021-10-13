@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './NotFound.sass';
 
 export default class NotFound extends React.Component {
@@ -8,6 +7,6 @@ export default class NotFound extends React.Component {
         <main id='notfound'>
             <h1>Error</h1>
             <p>NOT FOUND</p>
-            <Link to='/'><button>Back to Homepage</button></Link>
+            <button onClick={this.props.history.goBack}>Go back</button>
         </main>
 }
