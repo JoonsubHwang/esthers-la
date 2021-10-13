@@ -7,7 +7,9 @@ describe('Searchbar', () => {
     test('renders Searchbar component', () => {
 
         render(
-            <Searchbar />
+            <BrowserRouter>
+                <Searchbar />
+            </BrowserRouter>
         );
 
         expect(screen.getByPlaceholderText('Search character')).toBeInTheDocument();
