@@ -86,6 +86,7 @@ Kayden Joonsub Hwang <br/>
 
 * [0.0.0](#000)
 * [0.1.0](#010)
+* [0.2.0](#020)
 
 <br/>
 
@@ -103,13 +104,21 @@ Kayden Joonsub Hwang <br/>
 ### 0.1.0 
 > ###### September 1st, 2021
 > ####    New
-> - Created App and Navbar.
+> - Created App and Navbar components.
 > - Created tests for App and Navbar.
-> - Created empty components (Main, Footer, and NotFound).
 
 <br/>
 
 ### 0.2.0 
-> In development.
+> ###### October 13th, 2021
+> ####    New
+> - Created Searchbar and Homepage components.
+> - Created Header and moved Navbar inside it.
+> - Created tests for Header, Searchbar, and Homepage.
+
+<br/>
+
+### 0.3.0 
+> ###### In development.
 
 <br/><br/>
