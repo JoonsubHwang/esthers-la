@@ -13,49 +13,57 @@
         h1
             margin-bottom: $xsmall-padding
 
-    #details
-        #categories, #subcategories
-            display: flex
+    #info
 
-            li
-                text-align: center
-                font-size: $small-font-size
-                color: $fg-dark-color
-
-                &.selected
-                    color: $fg-color
-
-        #categories
-            margin-bottom: $small-padding
-
-            li
-                width: 25%
-                padding: $small-padding
-
-                &.selected
-                    border-bottom: 2px solid $primary-color
-
-        #subcategories
-            @extend %round-corners
+        #tabs
+            overflow-y: hidden
+            height: 2.5rem
             margin-bottom: $medium-padding
-            border: 1px solid $fg-color
 
-            li
-                padding: $xsmall-padding $small-padding
-                border-right: 1px solid $fg-color
+            #categories, #subcategories
+                display: flex
+                transition: all $short-duration ease
 
-                @for $i from 1 through 10
-                    &:first-child:nth-last-child(#{$i}), 
-                    &:first-child:nth-last-child(#{$i}) ~ li
-                        width: math.div(100%, $i)
-
-                &:last-child
+                li
+                    border: 1px solid $fg-color
                     border-right: none
+                    text-align: center
+                    font-size: $small-font-size
+                    color: $fg-dark-color
 
-                &.selected
-                    background: $fg-color
-                    color: $bg-color
-                    font-weight: 600
+                    @for $i from 1 through 10
+                        &:first-child:nth-last-child(#{$i}), 
+                        &:first-child:nth-last-child(#{$i}) ~ li
+                            width: math.div(100%, $i)
+
+                    &:first-child
+                        border-radius: 0.3rem 0 0 0.3rem
+
+                    &:last-child
+                        border-radius: 0 0.3rem 0.3rem 0
+                        border-right: 1px solid $fg-color
+
+                    &.selected
+                        background: $fg-color
+                        color: $bg-color
+                        font-weight: 600
+
+            #categories
+                margin-bottom: 0.5rem
+
+                li
+                    padding: $small-padding
+
+
+            #subcategories
+                li
+                    padding: $small-padding $small-padding
+
+            .move-up 
+                transform: translateY(-120%)
+
+            .reset-position 
+                transform: translateY(0)
         
         #details
             @extend %full-width
