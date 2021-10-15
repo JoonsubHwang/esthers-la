@@ -6,12 +6,14 @@ import './CharInfo.sass';
 export default class CharInfo extends React.Component {
     
     state = {
-        tab: true
+        tab: true,
+        category: 'category-0',
+        subcategory: 0
     }
 
     toggleTab = () => {
 
-        this.setState({ category: !this.state.tab });
+        this.setState({ tab: !this.state.tab });
 
         console.debug(this.state.tab)
 
@@ -30,6 +32,10 @@ export default class CharInfo extends React.Component {
 
     }
 
+    setCategory = event => {
+        this.setState({ category: event.target.id });
+    }
+
     render = () =>
         <main id='charinfo'>
 
@@ -43,10 +49,12 @@ export default class CharInfo extends React.Component {
             <div id='info'>
                 <div id='tabs' onClick={this.toggleTab}>
                     <ul id='categories'>
-                        <li className='selected'>TAB</li>
-                        <li>TAB</li>
-                        <li>TAB</li>
-                        <li>TAB</li>
+                        {['Tab', 'tAb', 'taB', 'taabbb'].map((category, i) => 
+                            <li id={'category-' + i} key={'category-' + i} onClick={this.setCategory} 
+                            className={(this.state.category === 'category-' + i) ? 'selected' : ''}>
+                                {category}
+                            </li>
+                        )}
                     </ul>
                     <ul id='subcategories'>
                         <li className='selected'>Equip</li>
