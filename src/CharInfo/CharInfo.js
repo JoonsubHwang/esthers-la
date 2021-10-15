@@ -6,16 +6,16 @@ import './CharInfo.sass';
 export default class CharInfo extends React.Component {
     
     state = {
-        category: true
+        tab: true
     }
 
-    toggleCategory = () => {
+    toggleTab = () => {
 
-        this.setState({ category: !this.state.category });
+        this.setState({ category: !this.state.tab });
 
-        console.debug(this.state.category)
+        console.debug(this.state.tab)
 
-        if (this.state.category) {
+        if (this.state.tab) {
             document.querySelector('#categories').classList.remove('reset-position');
             document.querySelector('#subcategories').classList.remove('reset-position');
             document.querySelector('#categories').classList.add('move-up');
@@ -41,7 +41,7 @@ export default class CharInfo extends React.Component {
             </div>
 
             <div id='info'>
-                <div id='tabs' onClick={this.toggleCategory}>
+                <div id='tabs' onClick={this.toggleTab}>
                     <ul id='categories'>
                         <li className='selected'>TAB</li>
                         <li>TAB</li>
