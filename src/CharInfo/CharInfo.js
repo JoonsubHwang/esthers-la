@@ -8,7 +8,7 @@ export default class CharInfo extends React.Component {
     state = {
         tab: true,
         category: 'category-0',
-        subcategory: 0
+        subcategory: 'subcategory-0'
     }
 
     toggleTab = () => {
@@ -35,6 +35,9 @@ export default class CharInfo extends React.Component {
     setCategory = event => {
         this.setState({ category: event.target.id });
     }
+    setSubcategory = event => {
+        this.setState({ subcategory: event.target.id });
+    }
 
     render = () =>
         <main id='charinfo'>
@@ -57,11 +60,12 @@ export default class CharInfo extends React.Component {
                         )}
                     </ul>
                     <ul id='subcategories'>
-                        <li className='selected'>Equip</li>
-                        <li>Avatar</li>
-                        <li>Trait</li>
-                        <li>Jewel</li>
-                        <li>Kard</li>
+                        {['Equips', 'Avatars', 'Traits', 'Jewels', 'Kards'].map((subcategory, i) => 
+                            <li id={'subcategory-' + i} key={'subcategory-' + i} onClick={this.setSubcategory} 
+                            className={(this.state.subcategory === 'subcategory-' + i) ? 'selected' : ''}>
+                                {subcategory}
+                            </li>
+                        )}
                     </ul>
                 </div>
                 <div id='details'>
