@@ -1,3 +1,4 @@
+@use "sass:math"
 @use '../modules/reusables' as *
 
 
@@ -35,11 +36,24 @@
                     border-bottom: 2px solid $primary-color
 
         #subcategories
+            @extend %round-corners
             margin-bottom: $medium-padding
+            border: 1px solid $fg-color
 
             li
-                padding: $small-padding $small-padding
+                padding: $xsmall-padding $small-padding
+                border-right: 1px solid $fg-color
+
+                @for $i from 1 through 10
+                    &:first-child:nth-last-child(#{$i}), 
+                    &:first-child:nth-last-child(#{$i}) ~ li
+                        width: math.div(100%, $i)
+
+                &:last-child
+                    border-right: none
 
                 &.selected
-                    border-bottom: 1px solid $fg-color
+                    background: $fg-color
+                    color: $bg-color
+                    font-weight: 600
     
