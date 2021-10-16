@@ -5,5 +5,6 @@ export default class Loading extends React.Component {
 
     render = () =>
         <div id='loading'>
+            <div id='box'/>
         </div>
 }

@@ -1,1 +1,21 @@
+@use '../modules/reusables' as *
+
+    
+    
 #loading
+    width: 2.5rem
+    padding: .95rem 0rem
+    border: 1px solid white
+
+    #box
+        height: .6rem
+        width: 2.5rem
+        border-radius: 0.1rem
+        background: $primary-color
+        animation: 1s ease-in-out 0s infinite normal sway
+
+@keyframes sway
+    0%
+
+    100%
+        transform: translateX(0%) rotate(360deg)
