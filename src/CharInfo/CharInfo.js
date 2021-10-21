@@ -1,5 +1,6 @@
 import React from 'react';
 import './CharInfo.sass';
+import Loading from '../Loading/Loading'
 
 
 
@@ -42,15 +43,18 @@ export default class CharInfo extends React.Component {
     render = () =>
         <main id='charinfo'>
 
-            <div id='summary'>
-                <h1>{this.props.match.params.charName}</h1>
-                <p>Classname</p>
-                <p>iLevel 9999.99</p>
-                <p>In Servername</p>
-            </div>
+            <div id='base'>
 
-            <div id='info'>
+                <div id='summary'>
+                    <h1>{this.props.match.params.charName}</h1>
+                    <p>Classname</p>
+                    <p>iLevel 9999.99</p>
+                    <p>In Servername</p>
+                    {/* <Loading /> */}
+                </div>
+                
                 <div id='tabs' onClick={this.toggleTab}>
+
                     <ul id='categories'>
                         {['Tab', 'tAb', 'taB', 'taabbb'].map((category, i) => 
                             <li id={'category-' + i} key={'category-' + i} onClick={this.setCategory} 
@@ -59,6 +63,7 @@ export default class CharInfo extends React.Component {
                             </li>
                         )}
                     </ul>
+
                     <ul id='subcategories'>
                         {['Equips', 'Avatars', 'Traits', 'Jewels', 'Kards'].map((subcategory, i) => 
                             <li id={'subcategory-' + i} key={'subcategory-' + i} onClick={this.setSubcategory} 
@@ -67,41 +72,70 @@ export default class CharInfo extends React.Component {
                             </li>
                         )}
                     </ul>
+
                 </div>
-                <div id='details'>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                    <p>CONTENTS</p>
-                </div>
+
+            </div>
+
+            <div id='details'>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
+                <p>CONTENTS</p>
             </div>
         </main>
 }
