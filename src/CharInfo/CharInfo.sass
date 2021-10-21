@@ -4,16 +4,20 @@
 
 
 #charinfo
-    #summary
-        margin-bottom: $large-padding
+    @extend %parallax
 
-        *
-            margin-bottom: $xxsmall-padding
+    #base
+        @extend %parallax__layer
+        @extend %parallax__layer--bg
 
-        h1
-            margin-bottom: $xsmall-padding
+        #summary
+            margin-bottom: $large-padding
 
-    #info
+            *
+                margin-bottom: $xxsmall-padding
+
+            h1
+                margin-bottom: $xsmall-padding
 
         #tabs
             overflow-y: hidden
@@ -65,7 +69,11 @@
             .reset-position 
                 transform: translateY(0)
         
-        #details
-            @extend %full-width
-            background: $bg-light-color
+    #details
+        @extend %parallax__layer
+        @extend %full-width
+        top: 12rem
+        height: max-content
+        background: $fg-color
+        color: $bg-color
     
