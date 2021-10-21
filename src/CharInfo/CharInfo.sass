@@ -29,8 +29,7 @@
                 transition: all $short-duration ease
 
                 li
-                    border: 1px solid $fg-color
-                    border-right: none
+                    padding: $small-padding
                     text-align: center
                     font-size: $small-font-size
                     color: $fg-dark-color
@@ -40,28 +39,13 @@
                         &:first-child:nth-last-child(#{$i}) ~ li
                             width: math.div(100%, $i)
 
-                    &:first-child
-                        border-radius: 0.3rem 0 0 0.3rem
-
-                    &:last-child
-                        border-radius: 0 0.3rem 0.3rem 0
-                        border-right: 1px solid $fg-color
-
                     &.selected
-                        background: $fg-color
-                        color: $bg-color
-                        font-weight: 600
+                        @extend %round-corners
+                        border: 1px solid $fg-color
+                        color: $fg-color
 
             #categories
                 margin-bottom: 0.5rem
-
-                li
-                    padding: $small-padding
-
-
-            #subcategories
-                li
-                    padding: $small-padding $small-padding
 
             .move-up 
                 transform: translateY(-120%)
