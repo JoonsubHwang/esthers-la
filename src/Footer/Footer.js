@@ -4,7 +4,7 @@ import './Footer.sass';
 export default class Footer extends React.Component {
 
     render = () =>
-        <div>
+        <div id='footer'>
             FOOTER
         </div>
 }
