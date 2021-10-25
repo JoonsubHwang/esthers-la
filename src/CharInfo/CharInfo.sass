@@ -32,7 +32,7 @@
                     padding: $small-padding
                     text-align: center
                     font-size: $small-font-size
-                    color: $fg-dark-color
+                    color: $fg-color
 
                     @for $i from 1 through 10
                         &:first-child:nth-last-child(#{$i}), 
@@ -41,8 +41,8 @@
 
                     &.selected
                         @extend %round-corners
-                        border: 1px solid $fg-color
-                        color: $fg-color
+                        background: $fg-color
+                        color: $bg-color
 
             #categories
                 margin-bottom: 0.5rem
