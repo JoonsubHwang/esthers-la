@@ -1,44 +1,28 @@
 import React from 'react';
 import './CharInfo.sass';
-import Loading from '../Loading/Loading'
+import Selection from '../Selection/Selection'
 
 
 
 export default class CharInfo extends React.Component {
     
     state = {
-        tab: true,
-        category: 'category-0',
-        subcategory: 'subcategory-0'
+        category: 0,
+        subcategories: [ 0, 0, 0, 0 ]
     }
 
-    toggleTab = () => {
-
-        this.setState({ tab: !this.state.tab });
-
-        console.debug(this.state.tab)
-
-        if (this.state.tab) {
-            document.querySelector('#categories').classList.remove('reset-position');
-            document.querySelector('#subcategories').classList.remove('reset-position');
-            document.querySelector('#categories').classList.add('move-up');
-            document.querySelector('#subcategories').classList.add('move-up');
-        }
-        else {
-            document.querySelector('#categories').classList.remove('move-up');
-            document.querySelector('#subcategories').classList.remove('move-up');
-            document.querySelector('#categories').classList.add('reset-position');
-            document.querySelector('#subcategories').classList.add('reset-position');
-        }
-
+    setCategory = (event) => {
+        console.debug(event.target.id)
+        this.setState({ category: this.extractIndex(event.target.id) });
+    }
+    setSubcategories = (event) => {
+        let subcategories = this.state.subcategories;
+        subcategories[this.state.category] = this.extractIndex(event.target.id);
+        this.setState({ subcategories: subcategories });
     }
 
-    setCategory = event => {
-        this.setState({ category: event.target.id });
-    }
-    setSubcategory = event => {
-        this.setState({ subcategory: event.target.id });
-    }
+    extractIndex = (id) =>
+        Number(id.slice(-2))
 
     render = () =>
         <main id='charinfo'>
@@ -52,29 +36,30 @@ export default class CharInfo extends React.Component {
                     <p>In Servername</p>
                     {/* <Loading /> */}
                 </div>
+
+                <Selection 
+                categories={ [
+                    {
+                        name: 'a',
+                        subcategories: ['a1', 'a2', 'a3', 'a4']
+                    },
+                    {
+                        name: 'b',
+                        subcategories: ['b1', 'b2', 'b3', 'b4']
+                    },
+                    {
+                        name: 'c',
+                        subcategories: ['c1', 'c2', 'c3', 'c4']
+                    },
+                    {
+                        name: 'd',
+                        subcategories: ['d1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8', 'd9', 'd10', 'd11', 'd12', 'd13', 'd14', 'd15', 'd16' ]
+                    },
+                ]
+                } 
+                category={this.state.category} subcategories={this.state.subcategories} 
+                setCategory={this.setCategory} setSubcategories={this.setSubcategories} />
                 
-                <div id='tabs' onClick={this.toggleTab}>
-
-                    <ul id='categories'>
-                        {['Tab', 'tAb', 'taB', 'taabbb'].map((category, i) => 
-                            <li id={'category-' + i} key={'category-' + i} onClick={this.setCategory} 
-                            className={(this.state.category === 'category-' + i) ? 'selected' : ''}>
-                                {category}
-                            </li>
-                        )}
-                    </ul>
-
-                    <ul id='subcategories'>
-                        {['Equips', 'Avatars', 'Traits', 'Jewels', 'Kards'].map((subcategory, i) => 
-                            <li id={'subcategory-' + i} key={'subcategory-' + i} onClick={this.setSubcategory} 
-                            className={(this.state.subcategory === 'subcategory-' + i) ? 'selected' : ''}>
-                                {subcategory}
-                            </li>
-                        )}
-                    </ul>
-
-                </div>
-
             </div>
 
             <div id='details'>

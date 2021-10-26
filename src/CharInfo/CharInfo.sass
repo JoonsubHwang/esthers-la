@@ -15,39 +15,6 @@
 
             h1
                 margin-bottom: $xsmall-padding
-
-        #tabs
-            overflow-y: hidden
-            height: 2.5rem
-            margin-bottom: $medium-padding
-
-            #categories, #subcategories
-                display: flex
-                transition: all $short-duration ease
-
-                li
-                    padding: $small-padding
-                    text-align: center
-                    font-size: $small-font-size
-                    color: $fg-color
-
-                    @for $i from 1 through 10
-                        &:first-child:nth-last-child(#{$i}), 
-                        &:first-child:nth-last-child(#{$i}) ~ li
-                            width: math.div(100%, $i)
-
-                    &.selected
-                        @extend %round-corners
-                        background: $primary-color
-
-            #categories
-                margin-bottom: 0.5rem
-
-            .move-up 
-                transform: translateY(-120%)
-
-            .reset-position 
-                transform: translateY(0)
         
     #details
         @extend %full-width
