@@ -1,0 +1,45 @@
+@use 'sass:math'
+@use '../modules/reusables' as *
+
+
+
+.selection
+    overflow-y: hidden
+    // height: 2.5rem
+    margin-bottom: $medium-padding
+
+    .tab
+        display: flex
+        transition: all $short-duration ease
+        overflow-x: hidden
+
+        li
+            padding: $small-padding
+            text-align: center
+            font-size: $small-font-size
+            color: $fg-color
+
+            @for $i from 1 through 10
+                &:first-child:nth-last-child(#{$i}), 
+                &:first-child:nth-last-child(#{$i}) ~ li
+                    width: math.div(100%, $i)
+
+            &.selected
+                @extend %round-corners
+
+        // &.move-up 
+        //     transform: translateY(-120%)
+
+        // &.reset-position 
+        //     transform: translateY(0)
+
+        &.categories
+            margin-bottom: $xsmall-padding
+
+            li.selected
+                background: $primary-color
+
+        &.subcategories
+            li.selected
+                border: 1px solid $primary-color
+                color: $primary-color
