@@ -9,7 +9,7 @@
 
     .tab
         display: flex
-        transition: all $short-duration ease
+        column-gap: 1%
         overflow-x: hidden
 
         li
@@ -28,7 +28,7 @@
                 @for $i from 1 through 10
                     &:first-child:nth-last-child(#{$i}), 
                     &:first-child:nth-last-child(#{$i}) ~ li
-                        width: math.div(100%, $i)
+                        width: math.div(100%, $i) - 1%
                 
                 &.selected
                     background: $primary-color
