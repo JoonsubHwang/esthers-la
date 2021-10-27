@@ -8,9 +8,15 @@ import './Searchbar.sass';
 class Searchbar extends React.Component {
 
     searchCharacter = event => {
+
         event.preventDefault();
-        const charName = event.target.querySelector('input').value;
-        this.props.history.push(`/characters/${charName}`);
+        
+        let input = event.target.querySelector('input');
+        
+        this.props.history.push(`/characters/${input.value}`);
+
+        input.value = '';
+        input.blur();
     }
 
     render = () =>
