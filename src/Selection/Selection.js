@@ -7,30 +7,8 @@ export default class Selection extends React.Component {
         tab: true
     };
 
-    toggleTabs = () => {
-
-        this.setState({ tab: !this.state.tab });
-
-        let catClassList = document.querySelector('.categories').classList;
-        let subcatClassList = document.querySelector('.subcategories').classList;
-
-        if (this.state.tab) {
-            catClassList.remove('reset-position');
-            subcatClassList.remove('reset-position');
-            catClassList.add('move-up');
-            subcatClassList.add('move-up');
-        }
-        else {
-            catClassList.remove('move-up');
-            subcatClassList.remove('move-up');
-            catClassList.add('reset-position');
-            subcatClassList.add('reset-position');
-        }
-
-    }
-
     render = () =>
-        <div className='selection' onClick={this.toggleTabs}>
+        <div className='selection'>
 
             <ul className='tab categories'>
                 {this.props.categories.map((category, i) => 
