@@ -84,15 +84,16 @@ Kayden Joonsub Hwang <br/>
 
 ## Version History
 
-* [0.0.0](#000)
-* [0.1.0](#010)
-* [0.2.0](#020)
+* [v0.0.0](#v000)
+* [v0.1.0](#v010)
+* [v0.2.0](#v020)
+* [v0.3.0](#v030)
 
 <br/>
 
 
 
-### 0.0.0 
+### v0.0.0 
 
 > ###### August 27th, 2021
 > ####    New
@@ -101,7 +102,7 @@ Kayden Joonsub Hwang <br/>
 
 <br/>
 
-### 0.1.0 
+### v0.1.0 
 > ###### September 1st, 2021
 > ####    New
 > - Created App and Navbar components.
@@ -109,7 +110,7 @@ Kayden Joonsub Hwang <br/>
 
 <br/>
 
-### 0.2.0 
+### v0.2.0 
 > ###### October 13th, 2021
 > ####    New
 > - Created Searchbar and Homepage components.
@@ -118,7 +119,16 @@ Kayden Joonsub Hwang <br/>
 
 <br/>
 
-### 0.3.0 
+### v0.3.0 
+> ###### October 28th, 2021
+> ####    New
+> - Installed Firebase as the backend.
+> - Created NotFound page.
+> - Created NotFound and Selection components.
+
+<br/>
+
+### v0.4.0 
 > ###### In development.
 
 <br/><br/>
