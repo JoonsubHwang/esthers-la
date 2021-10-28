@@ -1,0 +1,28 @@
+[debug] [2021-10-28T18:49:15.118Z] ----------------------------------------------------------------------
+[debug] [2021-10-28T18:49:15.122Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Joonsub\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-10-28T18:49:15.122Z] CLI Version:   9.21.0
+[debug] [2021-10-28T18:49:15.122Z] Platform:      win32
+[debug] [2021-10-28T18:49:15.123Z] Node Version:  v14.13.1
+[debug] [2021-10-28T18:49:15.124Z] Time:          Thu Oct 28 2021 14:49:15 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-10-28T18:49:15.124Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-28T18:49:15.136Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-28T18:49:15.137Z] > authorizing via signed-in user (j97194719@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Joonsub\Documents\Joonsub\Programming\esthers-la\backend
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
