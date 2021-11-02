@@ -18,4 +18,7 @@ describe('Homepage', () => {
         
         expect(screen.getAllByRole('link')).toHaveLength(1 + 9);
     });
+    
+    // TODO: test links
+
 });
