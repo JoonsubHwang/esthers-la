@@ -1,14 +1,29 @@
 import React from 'react';
+import { getFunctions, httpsCallable } from 'firebase/functions';
 import './CharInfo.sass';
-import Selection from '../Selection/Selection'
+import Selection from '../Selection/Selection';
+
+
+
 
 
 
 export default class CharInfo extends React.Component {
+
+    componentDidMount() {
+        this.functions = getFunctions();
+        this.searchCharacter(this.props.match.params.charName);
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.charName !== this.props.match.params.charName)
+            this.searchCharacter(this.props.match.params.charName);
+    }
     
     state = {
         category: 0,
-        subcategories: [ 0, 0, 0, 0 ]
+        subcategories: [ 0, 0, 0, 0 ],
+        charData: {}
     }
 
     setCategory = (event) => {
@@ -24,16 +39,35 @@ export default class CharInfo extends React.Component {
     extractIndex = (id) =>
         Number(id.slice(-2))
 
+    searchCharacter = (charName) => {
+
+        const loadCharData = httpsCallable(this.functions, 'charData-loadCharData');
+
+        loadCharData({ charName: charName })
+            .then(result => {
+
+                // TODO: handle no character
+                // TODO: handle maintenance?
+
+                this.setState({ charData: result.data });
+            })
+            .catch(err => {
+                console.error(err); // TODO
+                // this.setState({ error: true });
+            });
+    }
+
     render = () =>
         <main id='charinfo'>
 
             <div id='base'>
 
                 <div id='summary'>
-                    <h1>{this.props.match.params.charName}</h1>
+                    <h1>{this.state.charData.charName}</h1>
+                    <p>@ {this.state.charData.server}</p>
                     <p>Classname</p>
-                    <p>iLevel 9999.99</p>
-                    <p>In Servername</p>
+                    <p>Lv. {this.state.charData.charLevel}</p>
+                    <p>iLv. {this.state.charData.iLevel}</p>
                     {/* <Loading /> */}
                 </div>
 
@@ -41,7 +75,7 @@ export default class CharInfo extends React.Component {
                 categories={ [
                     {
                         name: 'a',
-                        subcategories: ['a1', 'a2', 'a3', 'a4']
+                        subcategories: ['aaaa1', 'aaaaaaaa2', 'a3', 'a4']
                     },
                     {
                         name: 'b',
