@@ -63,11 +63,11 @@ export default class CharInfo extends React.Component {
             <div id='base'>
 
                 <div id='summary'>
-                    <h1>{this.state.charData.charName}</h1>
-                    <p>@ {this.state.charData.server}</p>
-                    <p>Classname</p>
-                    <p>Lv. {this.state.charData.charLevel}</p>
-                    <p>iLv. {this.state.charData.iLevel}</p>
+                    <h1>{this.state.charData.charName || 'Name'}</h1>
+                    <p>@ {this.state.charData.server || 'Server'}</p>
+                    <p>{this.state.charData.class || 'Class'}</p>
+                    <p>Lv. {this.state.charData.charLevel || 'Level'}</p>
+                    <p>iLv. {this.state.charData.iLevel || 'iLevel'}</p>
                     {/* <Loading /> */}
                 </div>
 
