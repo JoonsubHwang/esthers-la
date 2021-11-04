@@ -10,22 +10,18 @@ exports.loadCharData = functions.https.onCall(async (data, context) => {
 
     try {
 
-        console.debug('start: ' + new Date())
-
         const $ = await loadHTML(url);
-        
-        // TODO: check no character 
-        // <script> alert('캐릭터 정보가 없습니다. 캐릭터명을 확인해주세요.'); location.replace('/Profile/Character') </script>
 
+        // TODO: check no character 
         // TODO: check maintenance
-        
+
         const charData = {
             charName: $('.profile-character-info__name').text(),
+            server: $('.profile-character-info__server').text().split('@')[1],
+            class: $('.profile-character-info__img').attr('alt'),
             charLevel: $('.profile-character-info__lv').text(),
             iLevel: $('.level-info2__expedition').text().split('Lv.')[1],
-            server: $('.profile-character-info__server').text().split('@')[1]
         }
-        console.debug('end: ' + new Date())
 
         return charData;
 
@@ -44,6 +40,7 @@ exports.loadCharData = functions.https.onCall(async (data, context) => {
 async function loadHTML(url) {
     try {
         let res = await axios(url);
+        console.log()
         return cheerio.load(res.data);
     } catch (err) {
         throw err;
