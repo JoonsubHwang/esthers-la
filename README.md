@@ -26,12 +26,14 @@ Kayden Joonsub Hwang <br/>
 
 
 ## Technologies Used
-- React.js
-- JavaScript
-- SASS
 - Node.js
-- Express.js
-- MongoDB
+- Jest
+- Frontend
+    - React.js
+    - JavaScript
+    - Sass
+- Backend
+    - Firebase
 
 <br/><br/>
 
