@@ -74,20 +74,20 @@ export default class CharInfo extends React.Component {
                 <Selection 
                 categories={ [
                     {
-                        name: 'a',
-                        subcategories: ['aaaa1', 'aaaaaaaa2', 'a3', 'a4']
+                        name: 'Stats',
+                        subcategories: [ 'Equipments', 'Avatars', 'Jewels', 'Cards' ]
                     },
                     {
-                        name: 'b',
-                        subcategories: ['b1', 'b2', 'b3', 'b4']
+                        name: 'Abilities',
+                        subcategories: [ 'Combat', 'Life' ]
                     },
                     {
-                        name: 'c',
-                        subcategories: ['c1', 'c2', 'c3', 'c4']
+                        name: 'PvP',
+                        subcategories: [ 'Competitive', 'Elimination', 'Deathmatch', 'Boss fight']
                     },
                     {
-                        name: 'd',
-                        subcategories: ['d1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8', 'd9', 'd10', 'd11', 'd12', 'd13', 'd14', 'd15', 'd16' ]
+                        name: 'Collect\'s',
+                        subcategories: [ 'Islands\' orbs', 'Orpeus\'s stars', 'Titans\' hearts', 'Great arts', 'Mokoko seeds', 'Sea treasures', 'Ignea\'s symbols', 'Tree leaves' ]
                     },
                 ]
                 } 
