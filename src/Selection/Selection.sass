@@ -8,7 +8,6 @@
 
     .tab
         display: flex
-        flex-wrap: wrap
         column-gap: 1%
 
         li
@@ -22,6 +21,7 @@
                 @extend %round-corners
 
         &.categories
+            flex-wrap: wrap
             margin-bottom: $xsmall-padding
 
             li
@@ -34,9 +34,14 @@
                     background: $primary-color
 
         &.subcategories
+            overflow-x: auto
+            // TODO: overflow effect
+            background: linear-gradient(90deg, rgba(0,0,0,0) 92%, rgba(255,  28,  91,0.3))
+
             li
+                flex-shrink: 0
                 min-width: 4rem
 
                 &.selected
-                    border: 1px solid $primary-color
-                    color: $primary-color
+                    background: $fg-color
+                    color: $bg-color
